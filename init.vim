@@ -15,7 +15,7 @@ call plug#end()
 let mapleader = ","
 
 " Find or search in files using telescope.nvim
-nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-p> <cmd>Telescope git_files<cr>
 nnoremap <C-f> <cmd>Telescope live_grep<cr>
 
 " Configure telescope.nvim
