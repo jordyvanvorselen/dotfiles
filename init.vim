@@ -95,13 +95,6 @@ nnoremap <Leader>ts :TestSuite<CR>
 nnoremap <Leader>tf :TestFile<CR>
 nnoremap <Leader>tl :TestLast<CR>
 nnoremap <Leader>tn :TestNearest<CR>
-
-" vim-test bindings
-tnoremap <Leader><Leader> <C-\><C-n>
-nnoremap <Leader>ts :TestSuite<CR>
-nnoremap <Leader>tf :TestFile<CR>
-nnoremap <Leader>tl :TestLast<CR>
-nnoremap <Leader>tn :TestNearest<CR>
 nnoremap <Leader>tb :TestNearest<CR>
 
 " vim-test settings
