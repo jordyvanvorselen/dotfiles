@@ -81,8 +81,8 @@ set t_Co=256
 set ignorecase
 
 " Find or search in files using telescope.nvim
-nnoremap <C-p> <cmd>Telescope git_files<cr>
-nnoremap <C-f> <cmd>Telescope live_grep<cr>
+nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files({ show_untracked = true })<cr>
+nnoremap <C-f> <cmd>lua require('telescope.builtin').live_grep()<cr>
 
 " vim-better-whitespace
 let g:better_whitespace_enabled=1
