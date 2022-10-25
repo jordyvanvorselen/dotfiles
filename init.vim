@@ -51,15 +51,8 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
 \   'ruby': ['prettier'],
+\   'python': ['black', 'isort'],
 \}
-
-" auto run black
-augroup pythonchecks
-  autocmd!
-  autocmd BufWritePost *.py !python3 -m black .
-  autocmd BufWritePost *.py :e
-  autocmd BufWritePost *.py :setf python
-augroup END
 
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_save = 1
