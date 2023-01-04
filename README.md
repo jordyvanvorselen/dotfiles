@@ -9,9 +9,9 @@ My configuration for neovim, vscode etc.
 
 1. Install VSCode
 2. Clone this repo in your projects folder
-3. ln -s /<your_projects_folder>/dotfiles/vscode/settings.json /<vscode_path>/settings.json
-4. ln -s /<your_projects_folder>/dotfiles/vscode/keybindings.json /<vscode_path>/keybindings.json
-5. ln -s /<your_projects_folder>/dotfiles/vscode/snippets /<vscode_path>/snippets
+3. Run ```ln -s /<your_projects_folder>/dotfiles/vscode/settings.json /<vscode_path>/settings.json```
+4. Run ```ln -s /<your_projects_folder>/dotfiles/vscode/keybindings.json /<vscode_path>/keybindings.json```
+5. Run ```ln -s /<your_projects_folder>/dotfiles/vscode/snippets /<vscode_path>/snippets```
 
 ## Neovim
 
@@ -19,9 +19,9 @@ My configuration for neovim, vscode etc.
 
 1. Install neovim
 2. Clone this repo in your projects folder
-3. ln -s /<your_projects_folder>/dotfiles/init.vim /home/<your_username>/.config/nvim/init.vim
+3. Run ```ln -s /<your_projects_folder>/dotfiles/init.vim /home/<your_username>/.config/nvim/init.vim```
 4. Install https://github.com/BurntSushi/ripgrep
-5. Open neovim and run :PlugInstall to install plugins
+5. Open neovim and run ```:PlugInstall``` to install plugins
 
 ### Installing on your RedHat VDI
 #### Neovim
