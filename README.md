@@ -4,8 +4,8 @@ My configuration for neovim, vscode etc.
 
 ## VSCode
 
-* <vscode_path> in windows: "C:\Users\<username>\AppData\Roaming\Code\User\"
-* <vscode_path> in linux: "/home/<username>/.config/Code/User/"
+* <vscode_path> in windows: "C:\Users\<your_username>\AppData\Roaming\Code\User\"
+* <vscode_path> in linux: "/home/<your_username>/.config/Code/User/"
 
 1. Install VSCode
 2. Clone this repo in your projects folder
