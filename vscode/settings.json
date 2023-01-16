@@ -2,6 +2,8 @@
     "editor.defaultFormatter": "ms-dotnettools.csharp",
     "editor.formatOnSave": true,
     "editor.codeLens": false,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.startupEditor": "none",
     "workbench.editor.enablePreview": false,
@@ -21,4 +23,53 @@
         "editor.wordBasedSuggestions": false
     },
     "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "vim.leader": ",",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "leader",
+                "t",
+                "n"
+            ],
+            "commands": [
+                "testing.clearTestResults",
+                "testing.runAtCursor"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "t",
+                "f"
+            ],
+            "commands": [
+                "testing.clearTestResults",
+                "testing.runCurrentFile"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "t",
+                "s"
+            ],
+            "commands": [
+                "testing.clearTestResults",
+                "testing.runAll"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "t",
+                "l"
+            ],
+            "commands": [
+                "testing.clearTestResults",
+                "testing.reRunLastRun",
+                "dart.rerunLastTestDebugSession"
+            ]
+        },
+    ]
+}
 }
