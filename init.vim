@@ -126,6 +126,7 @@ noremap <Right> <NOP>
 
 " make highlighted search result colors more readable
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
+hi NormalFloat ctermfg=LightGrey
 
 " disable annoying highlighting when searching
 set nohlsearch

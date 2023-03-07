@@ -1,75 +1,76 @@
 {
-    "editor.defaultFormatter": "ms-dotnettools.csharp",
-    "editor.formatOnSave": true,
-    "editor.codeLens": false,
-    "editor.fontFamily": "'Fira Code'",
-    "editor.fontLigatures": true,
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.startupEditor": "none",
-    "workbench.editor.enablePreview": false,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+  "editor.formatOnSave": true,
+  "editor.codeLens": false,
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.enablePersistentSessions": false,
+  "[markdown]": {
+    "editor.defaultFormatter": null
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "[dart]": {
+    "editor.rulers": [80],
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets"
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "runInTerminal.clearBeforeRun": true,
+  "vim.leader": ",",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "t", "l"],
+      "after": [],
+      "commands": [{ "command": "runInTerminal.runLast" }]
     },
-    "[dart]": {
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        "editor.rulers": [
-            80
-        ],
-        "editor.selectionHighlight": false,
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        "editor.suggestSelection": "first",
-        "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false
+    {
+      "before": ["<leader>", "t", "n"],
+      "after": [],
+      "commands": [
+        { "command": "runInTerminal.run", "args": { "name": "nearest" } }
+      ]
     },
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "vim.leader": ",",
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [
-                "leader",
-                "t",
-                "n"
-            ],
-            "commands": [
-                "testing.clearTestResults",
-                "testing.runAtCursor"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "t",
-                "f"
-            ],
-            "commands": [
-                "testing.clearTestResults",
-                "testing.runCurrentFile"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "t",
-                "s"
-            ],
-            "commands": [
-                "testing.clearTestResults",
-                "testing.runAll"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "t",
-                "l"
-            ],
-            "commands": [
-                "testing.clearTestResults",
-                "testing.reRunLastRun",
-                "dart.rerunLastTestDebugSession"
-            ]
-        },
-    ]
-}
+    {
+      "before": ["<leader>", "t", "f"],
+      "after": [],
+      "commands": [
+        { "command": "runInTerminal.run", "args": { "name": "file" } }
+      ]
+    },
+    {
+      "before": ["<leader>", "t", "s"],
+      "after": [],
+      "commands": [
+        { "command": "runInTerminal.run", "args": { "name": "suite" } }
+      ]
+    },
+    {
+      "before": ["g", "f"],
+      "after": [],
+      "commands": [{ "command": "editor.action.goToTypeDefinition" }]
+    }
+  ],
+  "runInTerminal.commands": [
+    {
+      "match": "\\.dart$",
+      "name": "nearest",
+      "cmd": "flutter test ${relativeFile}"
+    },
+    {
+      "match": "\\.dart$",
+      "name": "file",
+      "cmd": "flutter test ${relativeFile}"
+    },
+    { "match": "\\.dart$", "name": "suite", "cmd": "flutter test" }
+  ],
+  "editor.inlineSuggest.enabled": true
 }
