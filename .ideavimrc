@@ -1,0 +1,63 @@
+" Plugins
+
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'dbakker/vim-paragraph-motion'
+
+" Set plugins
+set vim-paragraph-motion
+set surround
+set commentary
+set sneak
+
+" Change leader to comma
+let mapleader = ","
+
+set scrolloff=10
+
+" backspace over everything in insert mode
+set backspace=indent,eol,start
+
+" use tab in normal/visual mode to go to matching brackets:
+nnoremap <tab> %
+vnoremap <tab> %
+
+" other config settings
+set number
+set t_Co=256
+set ignorecase
+
+" vim-test bindings
+tnoremap <Leader><Leader> <C-\><C-n>
+nnoremap <Leader>ts :action ContextRun<CR>
+nnoremap <Leader>tf :action RunClass<CR>
+nnoremap <Leader>tl :action Rerun<CR>
+nnoremap <Leader>tn :action ContextRun<CR>
+
+" rename using keybind
+nnoremap <Leader>rn :action Refactorings.QuickListPopupAction<CR>
+
+" fix refactoring in intellij
+idearefactormode=keep
+
+" Go to definition bind
+nnoremap gf :action GotoImplementation<CR>
+
+" keep selected after indent
+vnoremap > >gv
+vnoremap < <gv
+
+nnoremap <Leader>s :action ReformatCode \| action OptimizeImports \| write<CR>
+nnoremap <Leader>q :quit<CR>
+
+" shared clipboards, no more pasting using the mouse
+set clipboard=unnamed
+
+" disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" disable annoying highlighting when searching
+set nohlsearch

@@ -1,19 +1,27 @@
 {
   "editor.formatOnSave": true,
   "editor.codeLens": false,
-  "editor.fontFamily": "'Fira Code'",
+  "editor.fontFamily": "'Consolas ligaturized v3'",
   "editor.fontLigatures": true,
+  "editor.fontSize": 14,
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.startupEditor": "none",
   "workbench.editor.enablePreview": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.fontSize": 14,
   "[markdown]": {
     "editor.defaultFormatter": null
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
   },
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
@@ -26,6 +34,18 @@
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "runInTerminal.clearBeforeRun": true,
   "vim.leader": ",",
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"],
+      "commands": []
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"],
+      "commands": []
+    }
+  ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "t", "l"],
@@ -54,9 +74,24 @@
       ]
     },
     {
+      "before": ["<leader>", "s"],
+      "after": [],
+      "commands": [{ "command": "workbench.action.files.save" }]
+    },
+    {
+      "before": ["<leader>", "Q"],
+      "after": [],
+      "commands": [{ "command": "workbench.action.closeWindow" }]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "after": [],
+      "commands": [{ "command": "workbench.action.closeActiveEditor" }]
+    },
+    {
       "before": ["g", "f"],
       "after": [],
-      "commands": [{ "command": "editor.action.goToTypeDefinition" }]
+      "commands": [{ "command": "editor.action.revealDefinition" }]
     }
   ],
   "runInTerminal.commands": [
@@ -72,5 +107,16 @@
     },
     { "match": "\\.dart$", "name": "suite", "cmd": "flutter test" }
   ],
-  "editor.inlineSuggest.enabled": true
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "yaml": true
+  },
+  "terminal.integrated.scrollback": 10000000000000000,
+  "window.openFilesInNewWindow": "off",
+  "settingsSync.keybindingsPerPlatform": false,
+  "editor.cursorSurroundingLines": 10
 }
