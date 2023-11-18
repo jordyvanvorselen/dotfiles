@@ -31,6 +31,9 @@ call plug#end()
 " Change leader to comma
 let mapleader = ","
 
+" Disable the mouse
+set mouse=
+
 " backspace over everything in insert mode
 set backspace=indent,eol,start
 
