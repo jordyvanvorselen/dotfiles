@@ -35,7 +35,7 @@ nnoremap <Leader>tl :action Rerun<CR>
 nnoremap <Leader>tn :action ContextRun<CR>
 
 " rename using keybind
-nnoremap <Leader>rn :action Refactorings.QuickListPopupAction<CR>
+nnoremap <Leader>r :action Refactorings.QuickListPopupAction<CR>
 
 " fix refactoring in intellij
 idearefactormode=keep
